@@ -2,7 +2,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader2, BarChart3, FileText, Settings, LogOut } from "lucide-react";
-import { getLoginUrl } from "@/const";
+// A LINHA PROBLEMÁTICA FOI REMOVIDA DAQUI
 import { useLocation } from "wouter";
 
 export default function Home() {
@@ -57,8 +57,9 @@ export default function Home() {
               </Card>
             </div>
 
+            {/* O BOTÃO DE LOGIN FOI CORRIGIDO AQUI */}
             <Button
-              onClick={() => window.location.href = getLoginUrl()}
+              onClick={() => navigate("/login")}
               size="lg"
               className="text-lg px-8 h-12 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 shadow-lg"
             >
